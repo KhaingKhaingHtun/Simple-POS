@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <AnchorPane prefHeight="60.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="lblRole" layoutX="14.0" layoutY="13.0" prefHeight="34.0" prefWidth="88.0" text="Role" />
+            <Label fx:id="lblName" layoutX="102.0" layoutY="13.0" prefHeight="34.0" prefWidth="138.0" text="Name" />
+            <Label fx:id="lblGender" layoutX="256.0" layoutY="13.0" prefHeight="34.0" prefWidth="88.0" text="Gender" />
+            <Button layoutX="491.0" layoutY="12.0" mnemonicParsing="false" onAction="#processLogout" prefHeight="34.0" prefWidth="94.0" text="Log out">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Separator layoutY="70.0" prefHeight="2.0" prefWidth="600.0" />
+      <Separator layoutX="408.0" layoutY="71.0" orientation="VERTICAL" prefHeight="328.0" prefWidth="6.0" />
+      <GridPane layoutY="82.0" prefHeight="318.0" prefWidth="386.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Cola" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Pepsi" GridPane.columnIndex="1" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="7up" GridPane.columnIndex="2" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Speed" GridPane.columnIndex="3" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="ToeToe" GridPane.rowIndex="1" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Pringles" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Pizza" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Burger" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Shampoo" GridPane.rowIndex="2" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Soap" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="FacialWash" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Bread" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Pussi Cake" GridPane.rowIndex="3" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Coffee" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Tea" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Milkshake" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Jelly" GridPane.rowIndex="4" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Fruit" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Decogen" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <CheckBox mnemonicParsing="false" onAction="#processItems" text="Conedin" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="407.0" layoutY="94.0" prefHeight="60.0" prefWidth="178.0" text="Check Out">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItems" layoutX="429.0" layoutY="161.0" prefHeight="60.0" prefWidth="156.0" text="Items">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="429.0" layoutY="230.0" prefHeight="60.0" prefWidth="156.0" text="Total">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="488.0" layoutY="351.0" mnemonicParsing="false" onAction="#processCheckout" prefHeight="34.0" prefWidth="94.0" text="Confirm">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
